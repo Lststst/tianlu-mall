@@ -1,0 +1,104 @@
+@import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/variable.scss";
+
+.index-header{
+  width: 100%;
+  height: 180px;
+  background-color: #fff;
+  .contain{
+    @include marginCenter(70%);
+    height: 100%;
+    .contain-top{
+      width: 100%;
+      height: 70%;
+      display: flex;
+      .contain-top-logo{
+        cursor: pointer;
+        width: 15%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: bold;
+        .logo1{
+          color: #000;
+          font-size: 30px;
+        }
+        .logo2{
+          color: $theme-color;
+          font-size: 16px;
+        }
+      }
+      .contain-top-search{
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .search{
+          display: flex;
+          width: 100%;
+          padding-left: 30px;
+          input{
+            width: 80%;
+            height: 40px;
+            border: 1px solid $theme-color;
+            transition: $transition;
+            padding-left: 10px;
+            &:focus{
+              box-shadow: 0 0 5px $theme-color;
+            }
+          }
+          button{
+            width: 8%;
+            height: 40px;
+            background-color: $theme-color;
+            color: #fff;
+            &:active{
+              background-color: #00b1c1;
+            }
+          }
+        }
+        .hotWord{
+          padding-left: 30px;
+          padding-top: 3px;
+          color: #999;
+        }
+      }
+    }
+    .contain-bottom{
+      width: 100%;
+      height: 30%;
+      color: #000;
+      font-size: 16x;
+      @include flex-between;
+      .contain-bottom-title{
+        width: 15%;
+        height: 100%;
+        padding: 15px 0 15px 10px;
+        color: #fff;
+        background-color: #444;
+      }
+      .contain-bottom-goodsButton{
+        width: 55%;
+        height: 100%;
+        display: flex;
+        .goodsButton{
+          cursor: pointer;
+          padding: 15px 30px;
+          text-align: center;
+          &:hover{
+            color: $theme-color;
+            text-decoration: underline;
+          }
+        }
+      }
+      .goodsButtonSelect{
+        color: $theme-color;
+      }
+      .contain-bottom-other{
+        width: 30%;
+        height: 100%;
+      }
+    }
+  }
+}

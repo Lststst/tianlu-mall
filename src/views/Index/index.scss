@@ -1,0 +1,21 @@
+@import "../../assets/scss/mixins.scss";
+@import "../../assets/scss/variable.scss";
+
+.main{
+  @include marginCenter(70%);
+  @include flex-between;
+  .main-left{
+    width: 75%;
+    .main-left-top{
+      height: 30px;
+      display: flex;
+      .searchList{
+        padding-left: 30px;
+      }
+    }
+  }
+  
+  .main-right{
+    width: 20%
+  }
+}

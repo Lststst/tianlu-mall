@@ -1,0 +1,54 @@
+@import "../../assets/scss/mixins.scss";
+@import "../../assets/scss/variable.scss";
+
+.header-contain{
+  width: 100%;
+  height: 50px;
+  background-color: #1c2327;
+  color: #fff;
+  @include flex-between;
+  a{
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+      color: $theme-color;
+    }
+  }
+  .header-contain-left{
+    width: 20%;
+    height: 100%;
+  }
+  .header-contain-right{
+    width: 40%;
+    height: 100%;
+    @include flex-around;
+    .el-dropdown,div{
+      color: #fff;
+      cursor: pointer;
+      &:hover{
+        color: $theme-color;
+      }
+    }
+    .el-dropdown{
+      font-size: 16px;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.userModal{
+  width: 200px;
+  height: 120px;
+  .userModal-top{
+    @include flex-between;
+    @include marginCenter(95%);
+    height: 80%;
+  }
+  .userModal-bottom{
+    color: #fff;
+    text-align: center;
+    @include marginCenter(95%);
+    background-color: $theme-color;
+  }
+}
